@@ -1,0 +1,31 @@
+>>>>>>>>>>>>><acceesss to vim instance:
+1-
+>ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
+
+2-put gcp.pub(public key) in GCP Metatdata ssh key.
+
+3-create VIM instance in gcp
+
+4-access to vim from local terminal with the command below:
+    >ssh -i ~/.ssh/gcp USERNAME@EXTERNAL_IP
+    
+    
+    
+>>>>>>>>>make a file visible from any directory
+
+
+   1->nano .bashrc
+   
+   2-write this inside the nano file :export PATH="${HOME}/FILE_DIRECTORY:${PATH}"
+   
+   3->source .bashrc
+   
+   
+   
+>>>>>>>>>>>>put file from local to vm in gcp
+
+
+  1>sftp CONFIG_FILE_TO_VIM_GCP
+  2> mkdir .gc
+  3> cd .
+  4>put file_name
